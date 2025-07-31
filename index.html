@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Systems Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of an Informatics Engineer specializing in low-level programming, embedded systems, and real-time applications">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Your Name - Systems Engineer Portfolio">
+    <meta property="og:description" content="Portfolio of an Informatics Engineer specializing in low-level programming">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Your Name</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Systems Engineer</span>
+                </h1>
+                <h2 class="hero-subtitle">Informatics Engineer</h2>
+                <p class="hero-description">
+                    Specializing in low-level programming, embedded systems, real-time applications, 
+                    and exploring cutting-edge technologies in C/C++, Rust, and functional programming.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="./attached_assets/CV 2025 FR_1753965397392.pdf" class="btn btn-secondary" download>
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-placeholder">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Recent graduate in Informatics Engineering with a passion for low-level programming 
+                        and system architecture. I'm particularly interested in embedded systems, operating 
+                        systems, and real-time applications that require deep understanding of hardware-software interaction.
+                    </p>
+                    <p>
+                        My technical interests span from traditional systems programming in C/C++ to exploring 
+                        modern alternatives like Rust, as well as functional programming paradigms with Haskell 
+                        and hardware description languages like VHDL.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-microchip"></i>
+                            <span>Embedded Systems</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-clock"></i>
+                            <span>Real-time Applications</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-cogs"></i>
+                            <span>System Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Systems Programming</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag primary">C/C++</span>
+                        <span class="skill-tag primary">Rust</span>
+                        <span class="skill-tag secondary">Assembly</span>
+                        <span class="skill-tag secondary">Linux Kernel</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Embedded & Hardware</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag primary">VHDL</span>
+                        <span class="skill-tag primary">ARM Cortex</span>
+                        <span class="skill-tag secondary">FPGA</span>
+                        <span class="skill-tag secondary">Microcontrollers</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Specialized Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag primary">Haskell</span>
+                        <span class="skill-tag secondary">OCaml</span>
+                        <span class="skill-tag secondary">Erlang</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag primary">Git</span>
+                        <span class="skill-tag primary">GDB</span>
+                        <span class="skill-tag secondary">Docker</span>
+                        <span class="skill-tag secondary">Make/CMake</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Real-Time Task Scheduler</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Custom real-time task scheduler implemented in C++ for embedded systems, 
+                        featuring priority-based scheduling and interrupt handling.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">ARM Cortex</span>
+                        <span class="tech-tag">Real-time</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Memory Allocator</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Low-level memory allocator in C with custom heap management, 
+                        fragmentation handling, and performance optimization.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">Memory Management</span>
+                        <span class="tech-tag">Performance</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Functional Parser Library</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Parser combinator library written in Haskell demonstrating advanced 
+                        functional programming concepts and type-level programming.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Haskell</span>
+                        <span class="tech-tag">Parsing</span>
+                        <span class="tech-tag">Functional</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>VHDL Signal Processor</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Digital signal processing unit implemented in VHDL for FPGA, 
+                        featuring custom algorithms and hardware optimization.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">VHDL</span>
+                        <span class="tech-tag">FPGA</span>
+                        <span class="tech-tag">DSP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Master's in Informatics Engineering</h3>
+                        <p class="timeline-company">[Your University] • 2023-2025</p>
+                        <p class="timeline-description">
+                            Specialized in systems programming, embedded systems, and advanced computer architecture. 
+                            Thesis focused on real-time operating systems optimization.
+                        </p>
+                        <div class="timeline-details">
+                            <h4>Key Coursework:</h4>
+                            <ul>
+                                <li>Advanced Operating Systems</li>
+                                <li>Embedded Systems Design</li>
+                                <li>Real-time Systems</li>
+                                <li>Computer Architecture</li>
+                                <li>Functional Programming</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Internship - Systems Developer</h3>
+                        <p class="timeline-company">[Company Name] • Summer 2024</p>
+                        <p class="timeline-description">
+                            Developed low-level drivers for embedded systems and contributed to real-time 
+                            application development using C/C++.
+                        </p>
+                        <div class="timeline-details">
+                            <h4>Key Achievements:</h4>
+                            <ul>
+                                <li>Implemented device drivers for custom hardware</li>
+                                <li>Optimized memory usage by 30% in critical applications</li>
+                                <li>Contributed to real-time communication protocols</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Bachelor's in Computer Science</h3>
+                        <p class="timeline-company">[Your University] • 2020-2023</p>
+                        <p class="timeline-description">
+                            Foundation in computer science with emphasis on algorithms, data structures, 
+                            and system programming.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>
+                        I'm always interested in discussing new opportunities in systems programming, 
+                        embedded development, or innovative projects involving low-level programming.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:your.email@example.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>your.email@example.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <a href="https://github.com/yourusername" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Profile</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

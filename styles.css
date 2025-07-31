@@ -737,3 +737,12 @@ html {
         scroll-behavior: smooth;
     }
 }
+
+/* Add this to your styles.css */
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--box-shadow-lg);
+}

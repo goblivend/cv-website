@@ -42,6 +42,13 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Function to create a mailto link
+function createMailtoLink(name, topic, message) {
+    const subject = encodeURIComponent(`Message from ${name}: ${topic}`);
+    const body = encodeURIComponent(message);
+    return `mailto:ivan.imbert@laposte.net?subject=${subject}&body=${body}`;
+}
+
 // Contact Form Handler
 const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', function(e) {
@@ -50,46 +57,21 @@ contactForm.addEventListener('submit', function(e) {
     // Get form data
     const formData = new FormData(contactForm);
     const name = formData.get('name');
-    const email = formData.get('email');
+    const subject = formData.get('subject');
     const message = formData.get('message');
+    const formMessage = document.getElementById('formMessage');
 
-    // Simple validation
-    if (!name || !email || !message) {
-        alert('Please fill in all fields.');
-        return;
-    }
+    // Create mailto link
+    const mailtoLink = createMailtoLink(name, subject, message);
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address.');
-        return;
-    }
-
-    // Here you can integrate with a form service like Formspree, Netlify Forms, etc.
-    // For now, we'll show a success message
-    alert('Thank you for your message! I\'ll get back to you soon.');
+    // Redirect to mailto link
+    window.location.href = mailtoLink;
+    
+    formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+    formMessage.style.color = 'green';
+    formMessage.style.display = 'block';
     contactForm.reset();
 
-    // Example integration with Formspree (uncomment and replace with your endpoint):
-    /*
-    fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response => {
-        if (response.ok) {
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            contactForm.reset();
-        } else {
-            alert('Oops! There was a problem submitting your form.');
-        }
-    }).catch(error => {
-        alert('Oops! There was a problem submitting your form.');
-    });
-    */
 });
 
 // Intersection Observer for animations
@@ -182,7 +164,7 @@ window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
     if (hero && scrolled < hero.offsetHeight) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        hero.style.transform = `translateY(${scrolled * 0.1}px)`;
     }
 });
 
@@ -208,3 +190,24 @@ fadeInScaleStyle.textContent = `
     }
 `;
 document.head.appendChild(fadeInScaleStyle);
+
+document.querySelectorAll('.toggle-description-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const card = this.closest('.project-card');
+        const detailedDescription = card.querySelector('.project-description-detailed');
+        const shortDescription = card.querySelector('.project-description');
+
+        if (detailedDescription.style.display === 'none') {
+            detailedDescription.style.display = 'block';
+            shortDescription.style.display = 'none';
+            this.classList.add('down');
+            card.classList.add('expanded'); // Add the expanded class to the card
+        } else {
+            detailedDescription.style.display = 'none';
+            shortDescription.style.display = 'block';
+            this.classList.remove('down');
+            card.classList.remove('expanded'); // Remove the expanded class from the card
+        }
+    });
+});
+

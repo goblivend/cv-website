@@ -108,6 +108,7 @@ html {
     background: transparent;
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
+    /* padding: 0.5rem 1rem; */
 }
 
 .btn-secondary:hover {
@@ -138,6 +139,8 @@ html {
     height: 4rem;
 }
 
+
+
 .nav-logo a {
     font-size: 1.5rem;
     font-weight: 700;
@@ -145,9 +148,17 @@ html {
     text-decoration: none;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Add some space between the nav menu and the language switcher */
+}
+
 .nav-menu {
     display: flex;
     gap: 2rem;
+    margin-left: auto; /* Push nav-menu to the right */
+    order: 1; /* Ensure nav-menu comes first in the layout */
 }
 
 .nav-link {
@@ -177,10 +188,17 @@ html {
     width: 100%;
 }
 
+.language-switcher {
+    order: 2; /* Ensure language-switcher comes after nav-menu */
+    /* margin-left: auto; */
+    margin-left: 1rem; /* Add some space to the left of the language switcher */
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    order: 3; /* Ensure hamburger comes last in the layout */
 }
 
 .hamburger .bar {
@@ -593,6 +611,13 @@ html {
     left: 0;
     color: var(--primary-color);
     font-weight: bold;
+}
+
+.timeline-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 /* Contact Section */

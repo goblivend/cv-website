@@ -30,6 +30,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const languageToggle = document.getElementById('language-toggle');
+    const downloadCvButton = document.getElementById('download-cv');
+    const elementsToTranslate = document.querySelectorAll('[data-en], [data-fr]');
+
+    languageToggle.addEventListener('click', function() {
+        const currentLanguage = languageToggle.textContent;
+        if (currentLanguage === 'FR') {
+            languageToggle.textContent = 'EN';
+            switchLanguage('fr');
+        } else {
+            languageToggle.textContent = 'FR';
+            switchLanguage('en');
+        }
+    });
+
+    function switchLanguage(lang) {
+        downloadCvButton.href = downloadCvButton.getAttribute(`data-pdf-${lang}`);
+        elementsToTranslate.forEach(element => {
+            const key = lang === 'en' ? 'data-en' : 'data-fr';
+            const text = element.getAttribute(key);
+            if (text) {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = text;
+                } else {
+                    element.innerHTML = text;
+                }
+            }
+        });
+    }
+});
+
+
 // Navbar background on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');

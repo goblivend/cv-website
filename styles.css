@@ -252,18 +252,27 @@
     border-radius: var(--border-radius);
     font-family: inherit;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+    background: var(--bg-primary);
+    color: var(--text-dark);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 6px rgba(37,99,235,0.06);
 }
 
 .contact-form textarea {
     resize: vertical;
     min-height: 120px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--text-light);
+    opacity: 0.9;
 }
 
 /* Animations */
